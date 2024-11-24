@@ -6,8 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E0B999062CF28B20008097DF /* Pods_Coffee_To_Go_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA43A044D083F4024F872D5F /* Pods_Coffee_To_Go_Cafe.framework */; };
+		E0B999072CF28B20008097DF /* Pods_Coffee_To_Go_Cafe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA43A044D083F4024F872D5F /* Pods_Coffee_To_Go_Cafe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0B9990A2CF28B2A008097DF /* openssl_grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B999092CF28B2A008097DF /* openssl_grpc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0B999082CF28B20008097DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0B999072CF28B20008097DF /* Pods_Coffee_To_Go_Cafe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		886E7FD3267BF4C2D7BE9C9B /* Pods-Coffee To Go Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee To Go Cafe.debug.xcconfig"; path = "Target Support Files/Pods-Coffee To Go Cafe/Pods-Coffee To Go Cafe.debug.xcconfig"; sourceTree = "<group>"; };
+		DA43A044D083F4024F872D5F /* Pods_Coffee_To_Go_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_To_Go_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E008BB202CF28A980052383A /* Coffee To Go Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee To Go Cafe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0B999092CF28B2A008097DF /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F879F014A0D864EAFDE418CD /* Pods-Coffee To Go Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee To Go Cafe.release.xcconfig"; path = "Target Support Files/Pods-Coffee To Go Cafe/Pods-Coffee To Go Cafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +60,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B999062CF28B20008097DF /* Pods_Coffee_To_Go_Cafe.framework in Frameworks */,
+				E0B9990A2CF28B2A008097DF /* openssl_grpc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96636800A6B4B3017BC8B5B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				886E7FD3267BF4C2D7BE9C9B /* Pods-Coffee To Go Cafe.debug.xcconfig */,
+				F879F014A0D864EAFDE418CD /* Pods-Coffee To Go Cafe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1EE327436D328E5200188D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0B999092CF28B2A008097DF /* openssl_grpc.framework */,
+				DA43A044D083F4024F872D5F /* Pods_Coffee_To_Go_Cafe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E008BB172CF28A980052383A = {
 			isa = PBXGroup;
 			children = (
 				E008BB222CF28A980052383A /* Coffee To Go Cafe */,
 				E008BB212CF28A980052383A /* Products */,
+				96636800A6B4B3017BC8B5B1 /* Pods */,
+				D1EE327436D328E5200188D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E008BB332CF28A990052383A /* Build configuration list for PBXNativeTarget "Coffee To Go Cafe" */;
 			buildPhases = (
+				16F5CCE6F92DFD8AC41A86C9 /* [CP] Check Pods Manifest.lock */,
 				E008BB1C2CF28A980052383A /* Sources */,
 				E008BB1D2CF28A980052383A /* Frameworks */,
 				E008BB1E2CF28A980052383A /* Resources */,
+				93093E32E303D53A845A039D /* [CP] Embed Pods Frameworks */,
+				E0B999082CF28B20008097DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +126,6 @@
 				E008BB222CF28A980052383A /* Coffee To Go Cafe */,
 			);
 			name = "Coffee To Go Cafe";
-			packageProductDependencies = (
-			);
 			productName = "Coffee To Go Cafe";
 			productReference = E008BB202CF28A980052383A /* Coffee To Go Cafe.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16F5CCE6F92DFD8AC41A86C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffee To Go Cafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93093E32E303D53A845A039D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go Cafe/Pods-Coffee To Go Cafe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go Cafe/Pods-Coffee To Go Cafe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go Cafe/Pods-Coffee To Go Cafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E008BB1C2CF28A980052383A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +229,7 @@
 /* Begin XCBuildConfiguration section */
 		E008BB342CF28A990052383A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 886E7FD3267BF4C2D7BE9C9B /* Pods-Coffee To Go Cafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -151,8 +241,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,14 +250,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go-Cafe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E008BB352CF28A990052383A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F879F014A0D864EAFDE418CD /* Pods-Coffee To Go Cafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -179,8 +274,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,9 +283,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go-Cafe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -231,7 +330,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +393,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
